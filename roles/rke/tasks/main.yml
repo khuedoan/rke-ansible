@@ -1,0 +1,6 @@
+---
+- name: Download the RKE binary
+  get_url:
+    url: https://github.com/rancher/rke/releases/download/v1.1.6/rke_linux-amd64
+    dest: /usr/local/bin/rke
+    mode: '0755'
