@@ -4,3 +4,13 @@
     url: https://github.com/rancher/rke/releases/download/v1.1.6/rke_linux-amd64
     dest: /usr/local/bin/rke
     mode: '0755'
+
+- name: Copy cluster configuration file
+  template:
+    src: cluster.yml.j2
+    dest: /tmp/cluster.yml
+
+- name: Deploy Kubernetes with RKE
+  command: /usr/local/bin/rke up
+  args:
+    chdir: /tmp
