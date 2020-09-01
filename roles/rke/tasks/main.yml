@@ -11,6 +11,6 @@
     dest: /tmp/cluster.yml
 
 - name: Deploy Kubernetes with RKE
-  command: /tmp/rke
+  command: /tmp/rke up
   args:
     chdir: /tmp
