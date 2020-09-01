@@ -16,3 +16,9 @@
       - docker-ce
       - docker-ce-cli
     state: present
+
+- name: Enable Docker service
+  systemd:
+    name: docker
+    state: started
+    enabled: yes
