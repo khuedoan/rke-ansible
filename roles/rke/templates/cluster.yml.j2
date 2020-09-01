@@ -1,17 +1,17 @@
 nodes:
-- address: 192.168.56.101
+{% for master in groups['masters'] %}
+- address: {{ master }}
   user: vagrant
   role:
   - controlplane
   - etcd
-- address: 192.168.56.102
+{% endfor %}
+{% for worker in groups['workers'] %}
+- address: {{ worker }}
   user: vagrant
   role:
   - worker
-- address: 192.168.56.103
-  user: vagrant
-  role:
-  - worker
+{% endfor %}
 
 services:
   etcd:
