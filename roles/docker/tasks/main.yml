@@ -1,0 +1,10 @@
+---
+- name: Set up Docker repository
+  yum_repository:
+    name: docker-ce-stable
+    description: Docker CE Stable - $basearch
+    baseurl: https://download.docker.com/linux/centos/7/$basearch/stable
+    enabled: 1
+    gpgcheck: 1
+    gpgkey: https://download.docker.com/linux/centos/gpg
+    file: docker-ce
