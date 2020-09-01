@@ -1,0 +1,8 @@
+---
+- hosts: all
+  roles:
+    - role: docker
+
+- hosts: masters
+  roles:
+    - role: rke
