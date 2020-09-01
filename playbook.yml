@@ -4,6 +4,6 @@
   roles:
     - role: docker
 
-- hosts: masters
+- hosts: localhost
   roles:
     - role: rke
