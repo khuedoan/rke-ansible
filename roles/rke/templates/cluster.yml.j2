@@ -1,14 +1,14 @@
 nodes:
 {% for master in groups['masters'] %}
 - address: {{ master }}
-  user: vagrant
+  user: {{ hostvars[master]['ansible_user'] }}
   role:
   - controlplane
   - etcd
 {% endfor %}
 {% for worker in groups['workers'] %}
 - address: {{ worker }}
-  user: vagrant
+  user: {{ hostvars[worker]['ansible_user'] }}
   role:
   - worker
 {% endfor %}
