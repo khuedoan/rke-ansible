@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "centos/8"
+  config.vm.box = "centos/7"
 
   config.vm.define "master" do |master|
     master.vm.network "private_network", ip: "192.168.56.101"
