@@ -22,3 +22,11 @@
     name: docker
     state: started
     enabled: yes
+
+- name: Add user to Docker group
+  become: yes
+  user:
+    name: "{{ ansible_env.USER }}"
+    groups:
+      - docker
+    append: yes
