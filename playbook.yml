@@ -5,6 +5,5 @@
     - role: docker
 
 - hosts: masters
-  become: yes
   roles:
     - role: rke
