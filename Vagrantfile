@@ -18,4 +18,10 @@ Vagrant.configure("2") do |config|
     vb.cpus   = 2
     vb.memory = 2048
   end
+
+  config.vm.provision "file",
+    source: "~/.ssh/id_rsa.pub",
+    destination: "~/.ssh/host.pub"
+  config.vm.provision "shell",
+    inline: "cat /home/vagrant/.ssh/host.pub >> /home/vagrant/.ssh/authorized_keys"
 end
