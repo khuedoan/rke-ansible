@@ -9,6 +9,7 @@
   template:
     src: cluster.yml.j2
     dest: /tmp/cluster.yml
+    mode: '0644'
 
 - name: Deploy Kubernetes with RKE
   command: /tmp/rke up
