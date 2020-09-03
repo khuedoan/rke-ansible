@@ -1,6 +1,6 @@
 # rke-ansible
 
-(WIP) Ansible playbook to install Rancher Kubernetes Engine
+Ansible playbook to install Rancher Kubernetes Engine
 
 ## Usage
 
